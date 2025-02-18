@@ -1,0 +1,44 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+nav {
+    background-color: #ff5733;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Menu Section */
+.menu-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

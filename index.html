@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites - Food Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-red-600 p-4 fixed w-full top-0 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">Delicious Bites</h1>
+            <ul class="hidden md:flex space-x-6 text-white">
+                <li><a href="#home" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="#menu" class="hover:text-yellow-300">Menu</a></li>
+                <li><a href="#about" class="hover:text-yellow-300">About</a></li>
+                <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-white" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-red-700 p-4 text-white text-center" id="mobile-menu">
+            <a href="#home" class="block py-2">Home</a>
+            <a href="#menu" class="block py-2">Menu</a>
+            <a href="#about" class="block py-2">About</a>
+            <a href="#contact" class="block py-2">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center text-center"
+        style="background-image: url('assets/top-view-circular-food-frame.jpg')"data-aos="fade-up">
+        <div class="bg-black bg-opacity-50 p-10 rounded-lg">
+            <h1 class="text-4xl md:text-6xl font-bold text-white">Taste the Best Food in Town</h1>
+            <p class="mt-4 text-lg md:text-xl text-yellow-300">Fresh, Delicious, and Made with Love!</p>
+            <button onclick="orderNow()" class="mt-6 px-6 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition">
+                Order Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-white" data-aos="fade-left">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-red-600">Our Menu</h2>
+            <p class="mt-4 text-lg">Delicious food to satisfy your cravings.</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+            <!-- Item 1 -->
+            <div class="bg-gray-200 rounded-lg p-6 text-center shadow-lg">
+                <img src="assets/side-view-pizza-with-slices-bell-pepper-pizza-slices-flour-board-cookware.jpg" alt="pizza" class="w-full h-40 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Cheesy Pizza</h3>
+                <p class="text-gray-700 mt-2">$12.99</p>
+            </div>
+            <!-- Item 2 -->
+            <div class="bg-gray-200 rounded-lg p-6 text-center shadow-lg">
+                <img src="assets/big-sandwich-hamburger-burger-with-beef-red-onion-tomato-fried-bacon.jpg" alt="burger" class="w-full h-40 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Juicy Burger</h3>
+                <p class="text-gray-700 mt-2">$9.99</p>
+            </div>
+            <!-- Item 3 -->
+            <div class="bg-gray-200 rounded-lg p-6 text-center shadow-lg">
+                <img src="assets/side-view-penne-pasta-with-tomato-sauce-greens-plate.jpg" alt="pasta" class="w-full h-40 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Creamy Pasta</h3>
+                <p class="text-gray-700 mt-2">$10.99</p>
+            </div>
+        </div>
+    </section>
+
+<!-- About Us Section -->
+<section id="about" class="relative text-white py-16">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/pexels-life-of-pix-67468.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Dark Overlay -->
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto text-center px-6">
+        <h2 class="text-3xl font-bold text-yellow-400">About Us</h2>
+        <p class="mt-4 text-lg">We are passionate about delivering the best food experience with high-quality ingredients and unique flavors that leave a lasting impression. Our commitment to excellence is reflected in every dish we prepare, ensuring that our customers enjoy a memorable and satisfying dining experience.🍽 Premium Ingredients – We carefully select the freshest vegetables, finest meats, and authentic spices to craft delicious meals.
+            👨‍🍳 Expert Chefs – Our team of skilled chefs brings years of expertise and creativity to the kitchen, ensuring each dish is a perfect blend of taste and presentation.
+            🔥 Handcrafted Recipes – Every burger, pizza, and dish we serve is made from scratch, following recipes that have been perfected over time.
+            🌱 Farm-to-Table Freshness – We prioritize organic and locally sourced ingredients, supporting sustainable food practices.
+            💡 Innovative Flavors – We constantly experiment with new recipes and flavors, offering a unique twist on classic favorites.
+            🏆 Customer Satisfaction – We believe great food brings people together, and we strive to deliver an unforgettable culinary journey for every guest.
+            
+            At our restaurant, quality, taste, and customer happiness are our top priorities. Whether you're craving a juicy burger, a cheesy pizza, or a healthy meal, we promise to serve you food that is made with love and passion.
+            
+            🚀 Join us and experience the best in food innovation, taste, and quality! 🍔🍕✨</p>
+        <div class="mt-6 flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8">
+           
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact" class="relative text-white py-16">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/pexels-negativespace-33999.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Dark Overlay -->
+    </div>
+
+    <div class="relative max-w-lg mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-yellow-400">Contact Us</h2>
+        <p class="mt-4 text-lg">We'd love to hear from you! Reach out for orders, feedback, or inquiries.</p>
+        <form class="bg-gray-800 bg-opacity-80 p-6 rounded-lg mt-6">
+            <input type="text" placeholder="Your Name" class="w-full p-2 mt-2 rounded bg-gray-900 text-white">
+            <input type="email" placeholder="Your Email" class="w-full p-2 mt-4 rounded bg-gray-900 text-white">
+            <textarea placeholder="Your Message" class="w-full p-2 mt-4 rounded bg-gray-900 text-white"></textarea>
+            <button class="mt-4 px-6 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-700 transition">
+                Send Message
+            </button>
+        </form>
+        
+        <!-- Contact Info -->
+        <div class="mt-6 space-y-4">
+            <p><i class="fas fa-phone-alt"></i> +123 456 7890</p>
+            <p><i class="fas fa-envelope"></i> contact@foodie.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Food Street, City, Country</p>
+        </div>
+    </div>
+</section>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
